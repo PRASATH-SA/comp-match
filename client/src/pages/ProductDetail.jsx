@@ -8,6 +8,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import EnquiryModal from '../components/enquiry/EnquiryModal';
 import AdSlot from '../components/ads/AdSlot';
+import ProductCard from '../components/product/ProductCard';
 
 export default function ProductDetail() {
   const { slug } = useParams();

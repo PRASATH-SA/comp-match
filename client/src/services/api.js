@@ -1,9 +1,18 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050/api';
+export const API_BASE = (
+  import.meta.env.VITE_API_BASE ||
+  import.meta.env.VITE_API_BASE_URL ||
+  import.meta.env.API_BASE ||
+  import.meta.env.VITE_API_URL ||
+  'http://localhost:5050/api'
+).replace(/\/+$/, '');
+
+export const API_URL = API_BASE;
+export const api_base = API_BASE;
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: API_BASE,
   withCredentials: true,
   headers: { 'Content-Type': 'application/json' },
 });
@@ -40,7 +49,7 @@ export const authAPI = {
   login: (data) => api.post('/auth/login', data),
   getMe: () => api.get('/auth/me'),
   logout: () => api.post('/auth/logout'),
-  googleLogin: () => { window.location.href = `${API_URL}/auth/google`; },
+  googleLogin: () => { window.location.href = `${API_BASE}/auth/google`; },
 };
 
 // ─── Products ───────────────────────────────────────────

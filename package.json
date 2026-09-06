@@ -1,0 +1,14 @@
+{
+  "name": "computer-match",
+  "version": "1.0.0",
+  "description": "Computer Match — E-Commerce Marketplace for New & Refurbished Computers",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "admin": "npm --prefix admin run dev",
+    "seed": "npm --prefix server run seed",
+    "build:client": "npm --prefix client run build",
+    "build:admin": "npm --prefix admin run build"
+  }
+}

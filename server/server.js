@@ -22,8 +22,8 @@ app.use(
 const allowedOrigins = [
   process.env.CLIENT_URL,
   process.env.ADMIN_URL,
-  'http://admin.compmatch.prasath.in/',
-  'http://compmatch.prasath.in/',
+  'https://admin.compmatch.prasath.in/',
+  'https://compmatch.prasath.in/',
   'http://localhost:5173',
   'http://localhost:5174',
   'http://127.0.0.1:5173',
